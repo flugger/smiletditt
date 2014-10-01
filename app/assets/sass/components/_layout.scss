@@ -1,0 +1,107 @@
+.ServicesBrief {
+
+    text-align: center;
+    @include row;
+
+    @include element( 'item' ) {
+
+        @include span( 1 of 1, (
+            'tablet':  1 of 2,
+            'netbook':  1 of 4
+        ));
+
+        padding-top: layout( 'spacing' ) * 2;
+    }
+}
+
+.DepartmentsBrief {
+
+    text-align: center;
+    @include row;
+
+    @include element( 'item' ) {
+
+        @include span( 1 of 1, (
+            'tablet':  1 of 3
+        ));
+
+        padding-top: layout( 'spacing' ) * 2;
+    }
+
+    @include element( 'phone' ) {
+        font-weight: 100;
+        color: black;
+        transition: color 0.1s;
+
+        @include hover() {
+            color: color( 'action' );
+        }
+    }
+
+    @include element( 'map' ) {
+        margin-top: layout( 'spacing' );
+    }
+}
+
+.BreadCrumb {
+    text-align: center;
+}
+
+.ServicesPage {
+
+    @include row;
+
+    @include element( 'text' ) {
+        @include span( 2 of 3 );
+    }
+
+    @include element( 'prices' ) {
+        text-align: center;
+        @include span( 1 of 3 );
+    }
+}
+
+.Offers {
+
+    text-align: center;
+    @include row;
+
+    @include element( 'item' ) {
+        @include span( 1 of 1, (
+            'tablet':  1 of 2
+        ));
+    }
+}
+
+.PriceList {
+
+    text-align: center;
+    @include row;
+
+    @include element( 'item' ) {
+        @include span( 1 of 1, (
+            'tablet':  1 of 3
+        ));
+    }
+}
+
+.Avatars {
+
+    text-align: center;
+    @include row;
+
+    @include element( 'item' ) {
+        @include span( 1 of 1, (
+            'tablet':  1 of 2
+        ));
+    }
+
+    img {
+        border-radius: 50%;
+
+        border: layout( 'radius' ) * 0.7 solid white;
+
+        height: layout( 'bigInputHeight' ) * 2;
+        width: layout( 'bigInputHeight' ) * 2;
+    }
+}

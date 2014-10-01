@@ -1,0 +1,23 @@
+$breakpoints: (
+    'phone':   480px,
+    'tablet':  700px,
+    'netbook': 960px,
+    'laptop':  1200px,
+    'desktop': 1500px
+);
+
+$colors: (
+    'navBackground':   #292929,
+    'darkBackground':  #1E1E1E,
+    'lightBackground': #e8eff2,
+    'action':          #00B9AD
+);
+
+$layout: (
+    'pageWidth':      1200px,
+    'logoWidth':      400px,
+    'bigInputHeight': 60px,
+    'inputHeight':    45px,
+    'spacing':        20px,
+    'radius':         6px
+);

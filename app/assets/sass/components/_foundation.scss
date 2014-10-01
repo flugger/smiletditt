@@ -1,0 +1,602 @@
+.PageContainer {
+    @extend %clearfix;
+
+    padding: 0 layout( 'spacing' );
+    max-width: layout( 'pageWidth' ) * 0.8;
+
+    @include center();
+
+    @include at( 'desktop' ) {
+        max-width: layout( 'pageWidth' );
+    }
+}
+
+.BrandIntro {
+    position: fixed;
+
+    width: 100%;
+    height: 250px;
+
+    @include at( 'phone' ) {
+        height: 300px;
+    }
+
+    @include at( 'tablet' ) {
+        height: 400px;
+    }
+
+    @include at( 'laptop' ) {
+        height: 500px
+    }
+
+    @include at( 'desktop' ) {
+        height: 600px
+    }
+    background: url( 'http://image.shutterstock.com/display_pic_with_logo/511702/169618781/stock-photo-dentist-tools-and-professional-dentistry-chair-waiting-to-be-used-by-orthodontist-169618781.jpg' ) 0 -400px;
+    background-size: cover;
+
+    @include until( 'laptop' ) {
+        background-position: 0 -200px;
+    }
+
+    @include until( 'phone' ) {
+        background-position: 0 0;
+    }
+
+    color: white;
+    text-align: center;
+
+    @include element( 'shade' ) {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba( #192025, 0.75 );
+    }
+
+    h3 {
+        margin: layout( 'spacing' ) 0 layout( 'spacing' ) * 0.5;
+    }
+
+    @include element( 'wrap' ) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        padding: layout( 'spacing' ) 0;
+
+        @include at( 'tablet' ) {
+            padding: layout( 'spacing' ) * 2 0;
+        }
+
+        transform: translate( -50%, -50% );
+
+        @include until( 'desktop' ) {
+            max-width: layout( 'logoWidth' ) * 0.9;
+        }
+
+        @include until( 'netbook' ) {
+            max-width: layout( 'logoWidth' ) * 0.8;
+        }
+
+        @include until( 'tablet' ) {
+            width: 100%;
+            padding: 0 layout( 'spacing' );
+        }
+    }
+
+    @include element( 'logo' ) {
+
+        padding-top: layout( 'spacing' );
+
+        a {
+            display: block;
+        }
+
+        img {
+            display: block;
+
+            max-width: layout( 'logoWidth' );
+
+            @include until( 'desktop' ) {
+                max-width: layout( 'logoWidth' ) * 0.9;
+            }
+
+            @include until( 'netbook' ) {
+                max-width: layout( 'logoWidth' ) * 0.8;
+                width: 100%;
+                height: auto;
+            }
+
+            @include until( 'phone' ) {
+                width: 75%;
+                @include center();
+            }
+        }
+    }
+
+    @include element( 'menu' ) {
+
+        @include row;
+
+        margin-left: layout( 'spacing' ) * -0.5;
+
+        li {
+            @include span( 1 of 2 );
+
+            padding-top: layout( 'spacing' ) * 0.5;
+            padding-left: layout( 'spacing' ) * 0.5;
+        }
+    }
+}
+
+.NavBar {
+    background: color( 'navBackground' );
+    padding: layout( 'spacing' ) 0;
+    @extend %clearfix;
+
+    transition: padding 0.2s;
+
+    @include at( 'netbook' ) {
+        padding: layout( 'spacing' ) * 1.5 0;
+    }
+
+    @include element( 'logo' ) {
+
+        float: left;
+
+        @include until( 'netbook' ) {
+            @include hidden();
+        }
+
+        a {
+            display: block;
+
+            &,
+            img {
+                width: auto;
+                height: layout( 'inputHeight' );
+            }
+        }
+    }
+
+    @include element( 'nav' ) {
+
+        @include at( 'netbook' ) {
+            float: right;
+        }
+
+        ul {
+            @include row();
+            margin-left: layout( 'spacing' ) * -0.5;
+        }
+
+        li {
+            @include span( 1 of 2, (
+                'tablet':  1 of 4
+            ));
+
+            padding-top: layout( 'spacing' ) * 0.5;
+            padding-left: layout( 'spacing' ) * 0.5;
+
+            @include at( 'netbook' ) {
+                width: auto;
+            }
+        }
+
+        a {
+            display: block;
+            height: layout( 'inputHeight' );
+            background: color( 'darkBackground' );
+
+            line-height: layout( 'inputHeight' );
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+
+            border-radius: layout( 'radius' ) * 0.7;
+            transition: color 0.1s;
+
+            @include at( 'netbook' ) {
+
+                padding: 0 layout( 'spacing' );
+                font-size: 13px;
+            }
+
+            @include hover {
+                color: color( 'action' );
+            }
+
+            &.isActive {
+                color: color( 'action' );
+            }
+        }
+    }
+}
+
+.Button,
+.Button--small {
+    display: block;
+    background: color( 'action' );
+    height: layout( 'bigInputHeight' );
+    border-bottom: layout( 'radius' ) * 0.7 solid darken( color( 'action' ), 5 );
+
+    line-height: layout( 'bigInputHeight' ) - layout( 'radius' ) * 0.5;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    border-radius: layout( 'radius' );
+
+    @include at( 'tablet' ) {
+        height: layout( 'bigInputHeight' ) * 1.1;
+        line-height: layout( 'bigInputHeight' ) * 1.1 - layout( 'radius' ) * 0.5;
+    }
+
+    @include at( 'laptop' ) {
+        height: layout( 'bigInputHeight' ) * 1.2;
+        line-height: layout( 'bigInputHeight' ) * 1.2 - layout( 'radius' ) * 0.5;
+        font-size: 18px;
+    }
+
+    @include hover {
+        background: lighten( color( 'action' ), 3 );
+        color: white;
+    }
+
+    &:active {
+        border-bottom-width: 0;
+        margin-top: layout( 'radius' ) * 0.7;
+        height: layout( 'bigInputHeight' ) - layout( 'radius' ) * 0.5;
+        background: color( 'action' );
+
+        transition:
+            border-width 0.1s,
+            margin 0.1s,
+            height 0.1s,
+            background 0.2s;
+
+        @include at( 'tablet' ) {
+            height: layout( 'bigInputHeight' ) * 1.1 - layout( 'radius' ) * 0.5;
+        }
+
+        @include at( 'laptop' ) {
+            height: layout( 'bigInputHeight' ) * 1.2 - layout( 'radius' ) * 0.5;
+        }
+    }
+}
+
+.Button--small {
+    display: inline-block;
+
+    border-bottom: layout( 'radius' ) * 0.5 solid darken( color( 'action' ), 5 );
+
+    height: layout( 'inputHeight' );
+
+    padding: 0 layout( 'spacing' );
+
+    margin-top: layout( 'spacing' );
+
+    line-height: layout( 'inputHeight' ) - layout( 'radius' ) * 0.7;
+
+    border-radius: layout( 'radius' ) * 0.7;
+    font-size: 12px;
+
+    @include at( 'netbook' ) {
+        font-size: 13px;
+    }
+
+    &:active {
+        margin-top: layout( 'spacing' ) + layout( 'radius' ) * 0.7;
+
+        height: layout( 'inputHeight' ) - layout( 'radius' ) * 0.7;
+    }
+}
+
+.Button--form {
+    margin-top: 0;
+    width: 100%;
+}
+
+.DynamicWrap {
+    position: relative;
+
+    top: 250px;
+
+    @include at( 'phone' ) {
+        top: 300px;
+    }
+
+    @include at( 'tablet' ) {
+        top: 400px;
+    }
+
+    @include at( 'laptop' ) {
+        top: 500px
+    }
+
+    @include at( 'desktop' ) {
+        top: 600px
+    }
+}
+.MainSection {
+    background: white;
+}
+
+.MainSection,
+.MainSection--shade {
+    padding: layout( 'spacing' ) * 2 0;
+}
+
+.MainSection--shade {
+    background: color( 'lightBackground' );
+}
+
+.MainSection--split {
+    border: 1px solid color( 'lightBackground' );
+}
+
+.CircularIcon {
+    display: block;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    border: layout( 'radius' ) * 0.7 solid white;
+
+    height: layout( 'bigInputHeight' ) + layout( 'spacing' );
+    width: layout( 'bigInputHeight' ) + layout( 'spacing' );
+
+    background: color( 'action' );
+
+    overflow: hidden;
+    transition: background 0.3s, border 0.3s, color 0.3s;
+
+    color: white;
+    line-height: layout( 'bigInputHeight' ) + layout( 'spacing' ) - layout( 'radius' ) * 0.7;
+    font-size: 40px;
+    text-align: center;
+
+    &:after {
+        display: none;
+    }
+
+    @include hover {
+        background: white;
+        color: color( 'action' );
+        border: layout( 'radius' ) * 0.9 solid color( 'action' );
+
+        .Icon:before {
+            position: relative;
+            content: "\e608";
+            display: block;
+            animation: toRightFromLeft 0.3s forwards;
+        }
+
+        .Icon--back:before {
+            content: "\e60d";
+            animation: toLeftFromRight 0.3s forwards;
+        }
+    }
+
+    @include center();
+
+    @include at( 'tablet' ) {
+        height: layout( 'bigInputHeight' ) * 1.1 + layout( 'spacing' );
+        line-height: layout( 'bigInputHeight' ) * 1.1 + layout( 'spacing' ) - layout( 'radius' ) * 0.7;
+        width: layout( 'bigInputHeight' ) * 1.1 + layout( 'spacing' );
+    }
+
+    @include at( 'laptop' ) {
+        height: layout( 'bigInputHeight' ) * 1.2 + layout( 'spacing' );
+        line-height: layout( 'bigInputHeight' ) * 1.1 + layout( 'spacing' );
+        width: layout( 'bigInputHeight' ) * 1.2 + layout( 'spacing' );
+    }
+}
+
+.Icon {
+    font-family: 'Icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.Icon {
+    display: inline-block;
+}
+
+.SocialIcons {
+
+    @extend %clearfix;
+    list-style: none;
+    margin: layout( 'spacing' ) 0 0;
+    padding: 0;
+    color: white;
+    font-size: 18px;
+
+    li {
+        display: inline-block;
+
+        a {
+            display: block;
+            background: color( 'action' );
+            height: layout( 'inputHeight' );
+            width: layout( 'inputHeight' );
+            border-radius: 50%;
+            line-height: layout( 'inputHeight' );
+            border-bottom: layout( 'radius' ) * 0.5 solid darken( color( 'action' ), 5 );
+            color: white;
+
+            &:active {
+                position: relative;
+                border-bottom-width: 0;
+                top: layout( 'radius' ) * 0.5;
+                height: layout( 'inputHeight' );
+                background: color( 'action' );
+
+                transition:
+                    border-width 0.1s,
+                    top 0.1s,
+                    height 0.1s,
+                    background 0.2s;
+            }
+
+            &.facebook {
+                @include hover {
+                    background: #3b5998;
+
+                    border-color: darken( #3b5998, 10 );
+                }
+            }
+
+            &.twitter {
+                @include hover {
+                    background: #4099FF;
+
+                    border-color: darken( #4099FF, 10 );
+                }
+            }
+
+            &.google {
+                @include hover {
+                    background: #d34836;
+
+                    border-color: darken( #d34836, 10 );
+                }
+            }
+        }
+    }
+}
+
+@keyframes toRightFromLeft {
+    49% {
+        -webkit-transform: translate( 100% );
+    }
+    50% {
+        opacity: 0;
+        -webkit-transform: translate( -100% );
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+@keyframes toLeftFromRight {
+    49% {
+        transform: translate( -100% );
+    }
+    50% {
+        opacity: 0;
+        transform: translate( 100% );
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+.Icon--survey:before {
+    content: "\e600";
+}
+.Icon--xRay:before {
+    content: "\e601";
+}
+.Icon--whitening:before {
+    content: "\e602";
+}
+.Icon--cleaning:before {
+    content: "\e603";
+}
+.Icon--emergency:before {
+    content: "\e604";
+}
+.Icon--gum:before {
+    content: "\e605";
+}
+.Icon--implant:before {
+    content: "\e606";
+}
+.Icon--rootCanal:before {
+    content: "\e607";
+}
+.Icon--arrowRight:before {
+    content: "\e608";
+}
+.Icon--facebook:before {
+    content: "\e60a";
+}
+.Icon--twitter:before {
+    content: "\e60b";
+}
+.Icon--google:before {
+    content: "\e609";
+}
+.Icon--student:before {
+    content: "\e60e";
+}
+.Icon--deal:before {
+    content: "\e60f";
+}
+.Icon--phone:before {
+    content: "\e60c";
+    position: relative;
+    font-size: 17px;
+    margin-right: 5px;
+}
+
+.Icon--inline {
+    display: inline-block;
+    margin-right: layout( 'spacing' );
+    vertical-align: middle;
+
+}
+
+.Icon--header {
+    display: inline-block;
+}
+
+.FooterBar {
+    height: layout( 'bigInputHeight' );
+    line-height: layout( 'bigInputHeight' );
+    background: color( 'action' );
+    text-align: center;
+
+    @include element( 'info' ) {
+        color: white;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        color: mix( white, lighten( color( 'action' ), 5 ) );
+
+        font-size: 12px;
+
+        @include at( 'netbook' ) {
+            font-size: 13px;
+        }
+    }
+}
+
+.ContactForm {
+
+    @include at( 'tablet' ) {
+        width: 50%;
+        @include center();
+    }
+
+    @include element( 'double' ) {
+        @include row();
+    }
+
+    @include element( 'doubleItem' ) {
+        @include span( 1 of 2 );
+    }
+}

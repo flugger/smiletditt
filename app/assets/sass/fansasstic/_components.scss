@@ -1,0 +1,6 @@
+@mixin element( $name ) {
+
+    @at-root #{&}-#{$name} {
+        @content;
+    }
+}

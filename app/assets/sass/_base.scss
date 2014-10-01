@@ -1,0 +1,341 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    font-size: 14px;
+
+    @include at( 'tablet' ) {
+        font-size: 15px;
+    }
+
+    @include at( 'laptop' ) {
+        font-size: 16px;
+    }
+}
+
+label {
+    position: relative;
+    display: inline-block;
+
+    padding-bottom: layout( 'spacing' ) * 0.25;
+
+    &.required:after {
+        position: absolute;
+        top: -5px;
+        right: -15px;
+        content: '*';
+        color: color( 'action' );
+        font-size: 30px;
+    }
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    cursor: pointer;
+
+    border: none;
+    margin-top: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    font-size: 14px;
+
+    @include at( 'tablet' ) {
+        font-size: 15px;
+    }
+
+    @include at( 'laptop' ) {
+        font-size: 18px;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+input {
+    border: 0;
+    border-bottom: layout( 'radius' ) * 0.5 solid darken( color( 'lightBackground' ), 5 );
+    border-radius: layout( 'radius' ) * 0.7;
+
+    margin-bottom: layout( 'spacing' );
+
+    width: 100%;
+    height: layout( 'inputHeight' );
+
+    padding: 0 layout( 'spacing' ) * 0.7;
+
+    font-size: 14px;
+
+    @include at( 'tablet' ) {
+        font-size: 15px;
+    }
+
+    @include at( 'laptop' ) {
+        font-size: 16px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: layout( 'spacing' ) * 0.5;
+
+    font-size: 20px;
+
+    @include at( 'tablet' ) {
+        font-size: 22px;
+    }
+
+    @include at( 'laptop' ) {
+        font-size: 24px;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+h3 {
+    margin: 10px 0;
+    font-weight: 100;
+    font-size: 22px;
+
+    @include at( 'laptop' ) {
+        font-size: 26px;
+    }
+}
+
+h4 {
+    margin-bottom: layout( 'spacing' ) * 0.5;
+
+    font-size: 16px;
+
+    @include at( 'tablet' ) {
+        font-size: 18px;
+    }
+
+    @include at( 'laptop' ) {
+        font-size: 20px;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+p {
+    margin: layout( 'spacing' ) * 0.5 0;
+    font-weight: 200;
+    line-height: 1.75;
+
+    @include at( 'tablet' ) {
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+a {
+    color: color( 'action' );
+    text-decoration: none;
+    font-weight: 800;
+
+    @include hover {
+        outline: none;
+        color: black;
+
+        transition: color 0.1s;
+    }
+}
+
+.map { height: 200px; width: 200px; border-radius: 50%; margin: 0 auto; border-bottom: layout( 'radius' ) * 0.7 solid darken( color( 'lightBackground' ), 10 ); }
+
+// plugin
+
+/**
+ * @package		PickMeUp - jQuery datepicker plugin
+ * @author		Nazar Mokrynskyi <nazar@mokrynskyi.com>
+ * @author		Stefan Petre <www.eyecon.ro>
+ * @copyright	Copyright (c) 2013-2014, Nazar Mokrynskyi
+ * @copyright	Copyright (c) 2008-2009, Stefan Petre
+ * @license		MIT License, see license.txt
+ */
+$border-radius						: layout( 'radius' ) * 0.7;
+$background							: color( 'navBackground' );
+$color								: white;
+$background-hover					: $background;
+$color-hover						: color( 'action' );
+$nav-color							: $color;
+$nav-color-hover					: $color-hover;
+$not-in-month						: #666;
+$not-in-month-hover					: #999;
+$disabled							: #333;
+$selected							: $color;
+$selected-background				: color( 'action' );
+$not-in-month-selected-background	: color( 'darkBackground' );
+$day-of-week						: $not-in-month-hover;
+$today-background					: $not-in-month-selected-background;
+$today-color						: $color-hover;
+
+.pickmeup {
+    background      : $background;
+    border-radius   : $border-radius;
+    box-sizing      : content-box;
+    display         : none;
+    position        : absolute;
+    font-size: 14px;
+
+    * {
+        box-sizing      : border-box;
+    }
+
+    .pmu-instance {
+        display    : inline-block;
+        padding    : layout( 'spacing' );
+        text-align : center;
+        width      : 15em;
+
+        .pmu-button {
+            color           : $color;
+            cursor          : pointer;
+            outline         : none;
+            text-decoration : none;
+        }
+
+        .pmu-today {
+            background : $today-background;
+            color      : $today-color;
+        }
+
+        .pmu-button:hover {
+            background : $background-hover;
+            color      : $color-hover;
+        }
+
+        .pmu-not-in-month {
+            color : $not-in-month;
+        }
+
+        .pmu-disabled,
+        .pmu-disabled:hover {
+            color  : $disabled;
+            cursor : default;
+        }
+
+        .pmu-selected {
+            &,
+            &:hover {
+                background : $selected-background;
+                color      : $selected;
+            }
+        }
+
+        .pmu-not-in-month.pmu-selected {
+            background : $not-in-month-selected-background;
+        }
+
+        nav {
+            color       : $nav-color;
+            display     : -ms-flexbox;
+            display     : -webkit-flex;
+            display     : flex;
+            line-height : 2em;
+
+            *:first-child :hover {
+                color : $nav-color-hover;
+            }
+
+            .pmu-prev,
+            .pmu-next {
+                display : none;
+                height  : 2em;
+                width   : 1em;
+            }
+            .pmu-month {
+                width : 14em;
+            }
+        }
+
+        .pmu-years,
+        .pmu-months {
+            * {
+                display     : inline-block;
+                line-height : 3.6em;
+                width       : 3.5em;
+            }
+        }
+
+        .pmu-day-of-week {
+            color  : $day-of-week;
+            cursor : default;
+        }
+
+        .pmu-day-of-week,
+        .pmu-days {
+            * {
+                display     : inline-block;
+                line-height : 1.5em;
+                width       : 2em;
+            }
+        }
+
+        .pmu-day-of-week * {
+            line-height : 1.8em;
+        }
+    }
+
+    .pmu-instance:first-child .pmu-prev,
+    .pmu-instance:last-child .pmu-next {
+        display : block;
+    }
+
+    .pmu-instance:first-child,
+    .pmu-instance:last-child {
+        .pmu-month {
+            width : 13em;
+        }
+    }
+
+    .pmu-instance:first-child:last-child .pmu-month {
+        width : 12em;
+    }
+
+    &:not(.pmu-view-days) .pmu-days,
+    &:not(.pmu-view-days) .pmu-day-of-week,
+    &:not(.pmu-view-months) .pmu-months,
+    &:not(.pmu-view-years) .pmu-years {
+        display : none;
+    }
+}

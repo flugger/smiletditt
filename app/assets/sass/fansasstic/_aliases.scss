@@ -1,0 +1,11 @@
+@function breakpoint( $name ) {
+    @return map-get( $breakpoints, $name );
+}
+
+@function color( $name ) {
+    @return map-get( $colors, $name );
+}
+
+@function layout( $name ) {
+    @return map-get( $layout, $name );
+}

@@ -1,0 +1,55 @@
+@mixin row() {
+
+    @extend %clearfix;
+
+    margin: 0 0 0 -20px;
+    padding: 0;
+
+    list-style: none;
+}
+
+@mixin span( $_default, $_breakpoints: null ) {
+
+    float: left;
+    padding-top: 20px;
+    padding-left: 20px;
+    width: ( nth( $_default, 1 ) / nth( $_default, 3 ) * 100 ) * 1%;
+
+    @for $_firstRowIndex from 1 through nth( $_default, 3 ) {
+        &:nth-child( #{ $_firstRowIndex} ) {
+            padding-top: 0;
+        }
+    }
+
+    @if $_breakpoints {
+
+        @for $_breakpoint from 1 through length( $_breakpoints ) {
+
+            $_currentPoint: nth( nth( $_breakpoints, $_breakpoint ), 1 );
+            $_ratio:        nth( nth( $_breakpoints, $_breakpoint ), 2 );
+
+            @if $_breakpoint < length( $_breakpoints ) {
+                @include between( $_currentPoint, nth( nth( $_breakpoints, $_breakpoint + 1 ), 1 ) ) {
+                    width: ( nth( $_ratio, 1 ) / nth( $_ratio, 3 ) * 100 ) * 1%;
+
+                    @for $_firstRowIndex from 1 through nth( $_ratio, 3 ) {
+                        &:nth-child( #{$_firstRowIndex} ) {
+                            padding-top: 0;
+                        }
+                    }
+                }
+
+            } @else {
+                @include at( $_currentPoint ) {
+                    width: ( nth( $_ratio, 1 ) / nth( $_ratio, 3 ) * 100 ) * 1%;
+
+                    @for $_firstRowIndex from 1 through nth( $_ratio, 3 ) {
+                        &:nth-child( #{$_firstRowIndex} ) {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
