@@ -127,6 +127,14 @@
             padding-left: layout( 'spacing' ) * 0.5;
         }
     }
+
+    @include element( 'link' ) {
+        font-weight: 100;
+
+        @include hover() {
+            color: white;
+        }
+    }
 }
 
 .NavBar {
@@ -298,6 +306,10 @@
 .Button--form {
     margin-top: 0;
     width: 100%;
+}
+
+.Button--order {
+    display: none;
 }
 
 .DynamicWrap {

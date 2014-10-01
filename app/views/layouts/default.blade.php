@@ -66,15 +66,20 @@
                                 <img src = "images/logo-smilet-ditt.svg" alt = "Smilet Ditt" width = "400" height = "100">
                             </a>
                         </h1>
-                        <h3>Vennligst velg avdeling:</h3>
-                        <ul class = "BrandIntro-menu">
-                            <li>
-                                <a href = "#" class = "Button">Nydalen</a>
-                            </li>
-                            <li>
-                                <a href = "#" class = "Button">Romsås</a>
-                            </li>
-                        </ul>
+
+                        @if ( Request::url() != route( 'contact' ) )
+                            <h3>Vennligst velg avdeling:</h3>
+                            <ul class = "BrandIntro-menu">
+                                <li>
+                                    <a href = "#" class = "Button js-departmentButton">Nydalen</a>
+                                </li>
+                                <li>
+                                    <a href = "#" class = "Button js-departmentButton">Romsås</a>
+                                </li>
+                            </ul>
+                            <a href = "{{ URL::route( 'contact' ) }}" class = "Button Button--order js-orderButton">Bestill</a>
+                        @endif
+
                     </div>
                 </div>
             </div>
