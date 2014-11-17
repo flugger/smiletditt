@@ -120,6 +120,9 @@
                         <ul class="DepartmentsBrief">
                             <li class = "DepartmentsBrief-item">
                                 <h2>Avdeling Nydalen</h2>
+                                <h3>
+                                    <span class = "Icon Icon--phone"></span><a href = "tel:40609160" class = "DepartmentsBrief-phone">22 23 03 03</a>
+                                </h3>
                                 <div>
                                     <strong>Hverdager</strong>
                                     <span>10-20</span>
@@ -133,12 +136,18 @@
                                 @else
                                     <div class = "DepartmentsBrief-map">
                                         <div class = "map" id = "map-nydalen"></div>
-                                        <p><a href = "#">Maridalsveien 264<br />0872 Oslo</a></p>
+                                        <p>
+                                            <span><strong>Maridalsveien 264</strong> - 0872 Oslo<br></span>
+                                            <a href = "https://www.google.no/maps/place/Maridalsveien+264,+0872+Oslo/@59.9473383,10.7598443,17z/data=!3m1!4b1!4m2!3m1!1s0x46416e1a9154ac3b:0xbb82da5680a976c5">Forstørr kart</a>
+                                        </p>
                                     </div>
                                 @endif
                            </li>
                             <li class = "DepartmentsBrief-item">
                                 <h2>Avdeling Romsås</h2>
+                                <h3>
+                                    <span class = "Icon Icon--phone"></span><a href = "tel:40609160" class = "DepartmentsBrief-phone">22 10 83 00</a>
+                                </h3>
                                 <div>
                                     <strong>Hverdager</strong>
                                     <span>10-20</span>
@@ -152,15 +161,16 @@
                                 @else
                                     <div class = "DepartmentsBrief-map">
                                         <div class = "map" id = "map-romsas"></div>
-                                        <p><a href = "#">Romsås Senter 1<br />0970 Oslo</a></p>
+                                        <p>
+                                            <span><strong>Romsås Senter 1</strong> - 0970 Oslo<br></span>
+                                            <a href = "https://www.google.no/maps/place/Roms%C3%A5s+Senter+1,+0970+Oslo/@59.9628436,10.892828,17z/data=!4m2!3m1!1s0x464170099bf827c7:0x13cab2bcbaf35c7a">Forstørr kart</a>
+                                        </p>
+                                        <p></a></p>
                                     </div>
                                 @endif
                             </li>
                             <li class = "DepartmentsBrief-item">
                                 <h2>Smilet Ditt Tannklinikk</h2>
-                                <h3>
-                                    <span class = "Icon Icon--phone"></span><a href = "tel:40609160" class = "DepartmentsBrief-phone">22 22 55 55</a>
-                                </h3>
                                 <ul class = "SocialIcons">
                                     <li class="SocialIcons-icon">
                                         <a href = "https://www.facebook.com/smiletditttannkinikk" class = "facebook" target = "_blank"><span class = "Icon Icon--facebook"></span></a>
@@ -187,6 +197,7 @@
 
         {{ HTML::script( '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' ) }}
         {{ HTML::script( 'js/jquery.pickmeup.min.js' ) }}
+        {{ HTML::script( 'js/jquery.icheck.min.js' ) }}
         {{ HTML::script( 'js/main.js' ) }}
 
     </body>

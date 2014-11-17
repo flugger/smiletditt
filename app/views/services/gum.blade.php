@@ -17,27 +17,12 @@
     <section class = "MainSection">
         <div class = "PageContainer">
 
-            <h4>Plager</h4>
+            <h4>Plager og periodonti</h4>
             <p>
                 Tannløsning kommer som regel av tannkjøttsykdommen periodontitt. Det er en betennelsessykdom som i første rekke
                 rammer det vevet som holder tannen fast. Denne sykdommen rammer veldig mange, og er den vanligste årsaken til tanntap i Norge.
                 Periodontitt er vanligvis et langsomt voksende problem. Om du ikke får behandling, kan det ta mange år før en tann eller flere tenner
                 går tapt. Ofte kommer de alvorlige symptomene først i sluttfasen, i form av hevelse, verking og løse tenner.
-            </p>
-
-            <h4>Periodonti</h4>
-            <p>
-                En av våre tannleger med kompetanse på området utfører tannkjøttoperasjoner når vi ser at vanlig behandling hos tannpleier eller
-                tannlege ikke er nok. Dersom du likevel skulle miste tenner på grunn av periodontitt, så har vår spesialist mange års erfaring med implantatkirurgi.
-                Denne behandlingen yter folketrygden stønad til. Les mer under trygderegler. Vi ser dessverre at periimplantitt
-            </p>
-
-            <h4>Tannpleiertjenester</h4>
-            <p>
-                Vår tannpleiers fremste oppgave er å behandle og forebygge periodontitt (tannløsning), som rammer en veldig stor del av befolkningen.
-                Har det først dannet seg lommer rundt tennene, som er den vanligste årsaken til tanntap, vil du trenge profesjonell hjelp for å stoppe prosessen.
-                Det er erfor NAV yter stønad til denne typen behandling, et ubregrenset antall ganger per år. Pasienten  kun en moderat egenandel til oss.
-                Mange opplever dessuten velvære etter rens og puss hos tannpleier. Du føler deg rett og slett ren i munnen, noe de fleste setter svært stor pris på.
             </p>
 
             <h4>Tegn på periodontitt/tannkjøttsykdom</h4>

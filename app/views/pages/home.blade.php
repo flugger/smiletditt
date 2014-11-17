@@ -10,7 +10,7 @@
                         <span class = "Icon Icon--survey"></span>
                     </a>
                     <h2>Undersøkelse</h2>
-                    <p>Kjempetrygt og greier. Jeg ville prøvd det var jeg deg.</p>
+                    <p>Besøk oss for en konsultasjon hvor vi undersøker din tannhelse.</p>
                     {{ link_to_route( 'survey', 'Les mer' ) }}
                 </li>
                 <li class = "ServicesBrief-item">
@@ -18,7 +18,7 @@
                         <span class = "Icon Icon--emergency"></span>
                     </a>
                     <h2>Akutt hjelp</h2>
-                    <p>Kjempetrygt og greier. Jeg ville prøvd det var jeg deg.</p>
+                    <p>Har du akutte smerter og trenger umiddelbar hjelp hjelper vi deg.</p>
                     {{ link_to_route( 'emergency', 'Les mer' ) }}
                 </li>
                 <li class = "ServicesBrief-item">
@@ -26,7 +26,7 @@
                         <span class = "Icon Icon--whitening"></span>
                     </a>
                     <h2>Tannbleking</h2>
-                    <p>Kjempetrygt og greier. Jeg ville prøvd det var jeg deg.</p>
+                    <p>Lyst på et hvitere smil? Vi hjelper deg å få glansen tilbake.</p>
                     {{ link_to_route( 'whitening', 'Les mer' ) }}
                 </li>
                 <li class = "ServicesBrief-item">
@@ -34,7 +34,7 @@
                         <span class = "Icon Icon--gum"></span>
                     </a>
                     <h2>Tannkjøtt</h2>
-                    <p>Kjempetrygt og greier. Jeg ville prøvd det var jeg deg.</p>
+                    <p>Vi behandler periodonti og andre tannkjøttskader.</p>
                     {{ link_to_route( 'gum', 'Les mer' ) }}
                 </li>
                 <li class = "ServicesBrief-item">
@@ -42,7 +42,7 @@
                         <span class = "Icon Icon--implant"></span>
                     </a>
                     <h2>Tannimplantat</h2>
-                    <p>Kjempetrygt og greier. Jeg ville prøvd det var jeg deg.</p>
+                    <p>Har du mistet en tann kan vi hjelpe deg med å erstatte den.</p>
                     {{ link_to_route( 'implant', 'Les mer' ) }}
                 </li>
                 <li class = "ServicesBrief-item">
@@ -50,7 +50,7 @@
                         <span class = "Icon Icon--rootCanal"></span>
                     </a>
                     <h2>Rotfylling</h2>
-                    <p>Kjempetrygt og greier. Jeg ville prøvd det var jeg deg.</p>
+                    <p>Ved infiserte nerver kan vi hjelpe til med å tette rotkanalene.</p>
                     {{ link_to_route( 'rootCanal', 'Les mer' ) }}
                 </li>
                 <li class = "ServicesBrief-item">
@@ -58,7 +58,7 @@
                         <span class = "Icon Icon--cleaning"></span>
                     </a>
                     <h2>Tannrens</h2>
-                    <p>Kjempetrygt og greier. Jeg ville prøvd det var jeg deg.</p>
+                    <p>Tannrens ved bruk av nymoderne behandlingsmetoder.</p>
                     {{ link_to_route( 'cleaning', 'Les mer' ) }}
                 </li>
                 <li class = "ServicesBrief-item">
@@ -66,7 +66,7 @@
                         <span class = "Icon Icon--xRay"></span>
                     </a>
                     <h2>Digital Røntgen</h2>
-                    <p>Kjempetrygt og greier. Jeg ville prøvd det var jeg deg.</p>
+                    <p>Trygg, effektiv og smertefri røntgenundersøkelse.</p>
                     {{ link_to_route( 'xRay', 'Les mer' ) }}
                 </li>
             </ul>

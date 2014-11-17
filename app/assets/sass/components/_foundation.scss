@@ -32,7 +32,7 @@
     @include at( 'desktop' ) {
         height: 600px
     }
-    background: url( 'http://image.shutterstock.com/display_pic_with_logo/511702/169618781/stock-photo-dentist-tools-and-professional-dentistry-chair-waiting-to-be-used-by-orthodontist-169618781.jpg' ) 0 -400px;
+    background: url( 'http://image.shutterstock.com/display_pic_with_logo/78354/151234010/stock-photo-a-woman-is-smiling-while-being-at-the-dentist-151234010.jpg' );
     background-size: cover;
 
     @include until( 'laptop' ) {
@@ -347,7 +347,7 @@
 }
 
 .MainSection--split {
-    border: 1px solid color( 'lightBackground' );
+    border-top: 1px solid color( 'lightBackground' );
 }
 
 .CircularIcon {
@@ -611,4 +611,44 @@
     @include element( 'doubleItem' ) {
         @include span( 1 of 2 );
     }
+}
+
+.Price {
+  display: inline;
+  line-height: layout( 'bigInputHeight' );
+  margin: 0;
+  padding-left: 10px;
+
+  span {
+      font-size: 20px;
+  }
+}
+
+.Row {
+  @include row;
+
+  @include element( 'item' ) {
+      @include span( 1 of 1, (
+          'tablet':  1 of 2
+      ));
+      margin-bottom: layout( 'inputHeight' );
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.Header {
+  display: inline;
+  line-height: layout( 'bigInputHeight' );
+}
+
+.PriceRow {
+  text-align: center;
+  margin-top: 5px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }

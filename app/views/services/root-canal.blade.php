@@ -30,22 +30,6 @@
                 Behandlingen innebærer at tannlegen fjerner den døde pulpaen, spyler rent, legger inn et bakteriedrepende middel i rotkanalene,
                 tetter rotkanalene og bygger igjen tannkronen. Å få rotkanalene rene krever vanligvis flere besøk. Om smertene kommer tilbake etter behandlingen
                 med bakteriedrepende middel, fjernes fyllingen og rotkanalene gjøres rene på nytt og hullet fylles på samme måte som tidligere.
-                Man kan vente inntil fire–fem måneder før den provisoriske fyllingen byttes ut med «den nye tannen».
-            </p>
-
-            <h4>Første besøk</h4>
-            <p>
-                Ved første besøk forsikrer tannlegen seg om at området rundt tannen er bedøvet. Om noen av nervene lever, settes det bedøvelse.
-                I den betente tannen er det ondartede bakterier som ikke må gå til de andre tennene. For å hindre dette setter tannlegen en gummiduk, kofferdam,
-                over tannen og lager et hull for tannen. Med små instrumenter fjernes det som måtte være igjen av røttene, som da sannsynligvis er borte eller brune.
-                Kanalene blir renset med en blanding av ferskvann, salt og en kalkløsning. Blandingen har en pH-verdi på 14 og ingen bakterier overlever møtet med den.
-                Røntgenbilder tas for å kontrollere at kanalene er rene. Hullet i kronen blir fylt med en provisorisk fylling. Etter to–tre (maksimalt fem) måneder
-                må pasienten tilbake for fylling.
-            </p>
-
-            <h4>Andre besøk</h4>
-            <p>
-                Under andre besøk bores den provisoriske fyllingen ut og byttes ut med en solid fylling.
             </p>
 
             <h4>Medisinering</h4>

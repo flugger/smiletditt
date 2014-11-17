@@ -29,8 +29,7 @@
             <p>
                 Røntgen er et viktig hjelpemiddel i moderne tannbehandling. Med en røntgenundersøkelse får vi muligheten til å se ting som kan være umulig å oppdage ellers.
                 Dagens moderne tannbehandling legger vekt på forebyggende tiltak. Da bør vi oppdage eventuell sykdom på et så tidlig stadium som mulig.
-                Om vi i dag hadde fulgt gammel praksis og ventet til tennene begynte å verke og gjøre vondt, ville mulighetene for tilheling vanligvis vært mye dårligere
-                eller umulig. Ved en røntgenundersøkelse kan vi lete etter karies, lokalisere infeksjoner, kontrollere tilheling og oppdage skader på kjeveben og tenner.
+                Ved en røntgenundersøkelse kan vi lete etter karies, lokalisere infeksjoner, kontrollere tilheling og oppdage skader på kjeveben og tenner.
             </p>
 
         </div>

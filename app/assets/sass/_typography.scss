@@ -8,3 +8,34 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/* iCheck plugin flat skin, black
+----------------------------------- */
+.iradio {
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  padding: 0;
+  width: layout( 'inputHeight' );
+  height: layout( 'inputHeight' );
+  background: white;
+  border-bottom: 3px solid #d8e4e9;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px 0 0;
+}
+
+.iradio.checked:after {
+  display: block;
+  content: '';
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  margin: 10px 12px 12px;
+  background: #00B9AD;
+}
+
+.pushIt {
+  margin-bottom: layout( 'inputHeight' ) * 0.5 !important;
+  text-align: center;
+}

@@ -64,3 +64,8 @@ Route::get( 'kontakt', [
     'as' => 'contact',
     'uses' => 'PagesController@contact',
 ]);
+
+Route::post( 'kontakt', [
+    'as' => 'sendScheme',
+    'uses' => 'PagesController@sendScheme',
+]);

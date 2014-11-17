@@ -7,7 +7,27 @@
     <section class = "MainSection--shade">
         <div class = "PageContainer">
             <div class = "ContactForm">
-                {{ Form::open() }}
+
+                @if ( Session::get( 'errors' ) )
+                    <ul>
+                        @foreach ( Session::get( 'errors' )->all() as $error )
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                @endif
+
+                {{ Form::open( [ 'route' => 'sendScheme' ] ) }}
+
+                    <div class = "ContactForm-double pushIt">
+
+                        <div class = "ContactForm-doubleItem">
+                            <label>{{ Form::radio( 'department', '1', true ) }} Nydalen</label>
+                        </div>
+                        <div class = "ContactForm-doubleItem">
+                            <label>{{ Form::radio( 'department', '2', false ) }} Romsås</label>
+                        </div>
+
+                    </div>
 
                     {{ Form::label( 'name', 'Fullt Navn:', [ 'class' => 'required' ] )  }}
                     {{ Form::text( 'name', null )  }}
