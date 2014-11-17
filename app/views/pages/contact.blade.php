@@ -21,10 +21,10 @@
                     <div class = "ContactForm-double pushIt">
 
                         <div class = "ContactForm-doubleItem">
-                            <label>{{ Form::radio( 'department', '1', true ) }} Nydalen</label>
+                            <label>{{ Form::radio( 'department', '1', isset( $_GET[ 'nydalen' ] ) ) }} Nydalen</label>
                         </div>
                         <div class = "ContactForm-doubleItem">
-                            <label>{{ Form::radio( 'department', '2', false ) }} Romsås</label>
+                            <label>{{ Form::radio( 'department', '2', isset( $_GET[ 'romsas' ] ) ) }} Romsås</label>
                         </div>
 
                     </div>

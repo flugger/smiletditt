@@ -6,8 +6,7 @@
 
     <section class = "MainSection">
         <div class = "PageContainer">
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+            <p>Smilet Ditt Tannklinikk er en liten og hyggelig tannlegekjede hvor du som pasient står i hovedfokus.  Vi har nymoderne klinikker på Romsås og Nydalen, med parkeringsmuligheter og lett fremkommelighet. Vi tar hensyn til din tannhelse og sørger for at du gjennom hele prosessen føler deg ivaretatt og får en behagelig behandling. Et besøk hos oss skal etter våre mål alltid ende med en friskere tannhelse og glans i smilet ditt. Ta kontakt med oss for en undersøkelse, du er hjertelig velkommen.</p>
         </div>
     </section>
 

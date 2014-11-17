@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
+
 class PagesController extends BaseController {
 
     public function index() {
@@ -25,17 +27,17 @@ class PagesController extends BaseController {
     public function sendScheme() {
 
         $validator = Validator::make( Input::all(), [
-            'name'  => 'required',
-            'phone' => 'required'
+            'department' => 'required',
+            'name'       => 'required',
+            'phone'      => 'required'
         ] );
 
         if ( $validator->fails() ) {
             return Redirect::route( 'contact' )->withInput()->withErrors( $validator );
         }
 
-        Mail::send( 'emails.welcome', [ 'key' => 'value' ], function ( $message ) {
-
-            $message->to( 'foo@example.com', 'John Smith' )->subject( 'Welcome!' );
+        Mail::send( 'emails.scheme-sent', [ 'Laravel Test' ], function ( $message ) {
+            $message->to( 'flugged@gmail.com' );
         } );
     }
 }

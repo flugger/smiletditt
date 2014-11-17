@@ -18,11 +18,22 @@
         <div class = "PageContainer">
             <div class = "ServicesPage">
                 <div class="ServicesPage-text">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                    <p>Ved førstegangsundersøkelse hos oss vil vi gå igjennom et helseskjema med deg. Her opplyser du oss om eventuelle sykdommer og medikamenter du bruker. Det vil gi deg en bedre og tryggere behandling, slik at vi kan tilrettelegge rundt nåværende helse. Vi vil undersøke tennene dine og se etter hull og andre mulige misdannelser. Det kan være alt fra tidligere behandlinger til tannkjøtt og generell munnhygiene.</p>
+                    <p>En undersøkelse er ikke fullstendig uten røntgenbilder. Vi bruker digital teknologi, hvor vi får røntgenbilder tilsendt per maskin. Da får du en tryggere behandling og vi tar samtidig bedre vare på miljøet, det går også noe raskere. Vi vet at mange av våre pasienter setter pris på god kommunikasjon. Derfor legger vi stor vekt på å informere deg om din tannhelsesituasjon, og hva du må gjøre videre for å finne glansen i ditt smil. Velkommen skal du være!</p>
                 </div>
                 <div class="ServicesPage-prices">
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                    <div class = "PriceRow">
+                        <strong class = "Header">Konsultasjon</strong>
+                        <h3 class = "Price">300,-</h3>
+                    </div>
+                    <div class = "PriceRow">
+                        <strong class = "Header">Bedøvelse</strong>
+                        <h3 class = "Price">100,-</h3>
+                    </div>
+                    <div class = "PriceRow">
+                        <strong class = "Header">Røntgenbilde</strong>
+                        <h3 class = "Price">50,- <span>/ stk</span></h3>
+                    </div>
                 </div>
             </div>
         </div>

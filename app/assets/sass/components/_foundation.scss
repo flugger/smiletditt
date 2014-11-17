@@ -32,16 +32,8 @@
     @include at( 'desktop' ) {
         height: 600px
     }
-    background: url( 'http://image.shutterstock.com/display_pic_with_logo/78354/151234010/stock-photo-a-woman-is-smiling-while-being-at-the-dentist-151234010.jpg' );
+    background: url( '../images/bg.jpg' );
     background-size: cover;
-
-    @include until( 'laptop' ) {
-        background-position: 0 -200px;
-    }
-
-    @include until( 'phone' ) {
-        background-position: 0 0;
-    }
 
     color: white;
     text-align: center;
@@ -635,7 +627,12 @@
   }
 
   h2 {
-    text-align: center;
+      text-align: center;
+      margin-top: layout( 'inputHeight' );
+
+      &:first-child {
+        margin-top: 0;
+      }
   }
 }
 

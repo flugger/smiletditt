@@ -71,13 +71,14 @@
                             <h3>Vennligst velg avdeling:</h3>
                             <ul class = "BrandIntro-menu">
                                 <li>
-                                    <a href = "#" class = "Button js-departmentButton">Nydalen</a>
+                                    <a href = "#" class = "Button js-departmentButton departmentButton-nydalen">Nydalen</a>
                                 </li>
                                 <li>
-                                    <a href = "#" class = "Button js-departmentButton">Romsås</a>
+                                    <a href = "#" class = "Button js-departmentButton departmentButton-romsas">Romsås</a>
                                 </li>
                             </ul>
-                            <a href = "{{ URL::route( 'contact' ) }}" class = "Button Button--order js-orderButton">Bestill</a>
+                            <a href = "{{ URL::route( 'contact', [ 'nydalen' ] ) }}#info" class = "Button Button--order js-orderButton orderButton-nydalen">Bestill time</a>
+                            <a href = "{{ URL::route( 'contact', [ 'romsas' ] ) }}#info" class = "Button Button--order js-orderButton orderButton-romsas">Bestill time</a>
                         @endif
 
                     </div>
@@ -85,7 +86,7 @@
             </div>
         </header>
 
-        <section class = "DynamicWrap">
+        <section id = "info" class = "DynamicWrap">
             <header class = "NavBar">
                 <div class="PageContainer">
                     <h1 class = "NavBar-logo">
@@ -99,13 +100,13 @@
                                 <a href = "{{ URL::route( 'home' ) }}" class = "{{ Request::url() == route( 'home' ) ? 'isActive' : '' }}">Tjenester</a>
                             </li>
                             <li>
-                                <a href = "{{ URL::route( 'prices' ) }}" class = "{{ Request::url() == route( 'prices' ) ? 'isActive' : '' }}">Priser</a>
+                                <a href = "{{ URL::route( 'prices' ) }}#info" class = "{{ Request::url() == route( 'prices' ) ? 'isActive' : '' }}">Priser</a>
                             </li>
                             <li>
-                                <a href = "{{ URL::route( 'about' ) }}" class = "{{ Request::url() == route( 'about' ) ? 'isActive' : '' }}">Om Oss</a>
+                                <a href = "{{ URL::route( 'about' ) }}#info" class = "{{ Request::url() == route( 'about' ) ? 'isActive' : '' }}">Om Oss</a>
                             </li>
                             <li>
-                                <a href = "{{ URL::route( 'contact' ) }}" class = "{{ Request::url() == route( 'contact' ) ? 'isActive' : '' }}">Kontakt</a>
+                                <a href = "{{ URL::route( 'contact' ) }}#info" class = "{{ Request::url() == route( 'contact' ) ? 'isActive' : '' }}">Kontakt</a>
                             </li>
                         </ul>
                     </nav>
@@ -132,7 +133,7 @@
                                     <span>10-16</span>
                                 </div>
                                 @if ( Request::url() != route( 'contact' ) )
-                                    <a href = "#" class = "Button--small">Bestill time</a>
+                                    <a href = "{{ URL::route( 'contact', [ 'nydalen' ] ) }}#info" class = "Button--small">Bestill time</a>
                                 @else
                                     <div class = "DepartmentsBrief-map">
                                         <div class = "map" id = "map-nydalen"></div>
@@ -157,7 +158,7 @@
                                     <span>10-16</span>
                                 </div>
                                 @if ( Request::url() != route( 'contact' ) )
-                                    <a href = "#" class = "Button--small">Bestill time</a>
+                                    <a href = "{{ URL::route( 'contact', [ 'romsas' ] ) }}#info" class = "Button--small">Bestill time</a>
                                 @else
                                     <div class = "DepartmentsBrief-map">
                                         <div class = "map" id = "map-romsas"></div>
@@ -176,10 +177,10 @@
                                         <a href = "https://www.facebook.com/smiletditttannkinikk" class = "facebook" target = "_blank"><span class = "Icon Icon--facebook"></span></a>
                                     </li>
                                     <li class="SocialIcons-icon">
-                                        <a href = "" class = "twitter"><span class = "Icon Icon--twitter"></span></a>
+                                        <a href = "https://www.twitter.com/smiletditt" class = "twitter"><span class = "Icon Icon--twitter"></span></a>
                                     </li>
                                     <li class="SocialIcons-icon">
-                                        <a href = "" class = "google"><span class = "Icon Icon--google"></span></a>
+                                        <a href = "https://plus.google.com/smiletditt" class = "google"><span class = "Icon Icon--google"></span></a>
                                     </li>
                                 </ul>
                            </li>
@@ -194,6 +195,16 @@
                 </div>
             </footer>
         </section>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-56838502-1','auto');ga('send','pageview');
+        </script>
 
         {{ HTML::script( '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' ) }}
         {{ HTML::script( 'js/jquery.pickmeup.min.js' ) }}
