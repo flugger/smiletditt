@@ -11,6 +11,10 @@
         ));
 
         padding-top: layout( 'spacing' ) * 2;
+
+      &:nth-of-type( 5 ) {
+        clear: both;
+      }
     }
 }
 
