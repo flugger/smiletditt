@@ -13,7 +13,7 @@
         <meta property = "og:url"         content = "http://smiletditt.no">
         <meta property = "og:title"       content = "Smilet Ditt Tannklinikk">
         <meta property = "og:description" content = "Tannlegesenter i Oslo, med avdelinger i Nydalen og Romsås. Undersøkelse, akutt hjelp, tannbleking og mer.">
-        <meta property = "og:image"       content = "http://smiletditt.no/images/thumbnail.jpg">
+        <meta property = "og:image"       content = "http://smiletditt.noimages/thumbnail.jpg">
 
         <title>@yield( 'pageTitle', 'Smilet Ditt Tannklinikk - Tannlege i Oslo, med avdelinger i Nydalen og Romsås' )</title>
 
@@ -202,16 +202,6 @@
                 </div>
             </footer>
         </section>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-56838502-1','auto');ga('send','pageview');
-        </script>
 
         {{ HTML::script( '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' ) }}
         {{ HTML::script( 'js/jquery.pickmeup.min.js' ) }}

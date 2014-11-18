@@ -44,12 +44,14 @@ class PagesController extends BaseController {
             } );
         }
 
-        Mail::send( 'emails.scheme-sent', [ ], function ( $message ) {
+        $departments = [ 'Nydalen', 'Romsås' ];
+
+        Mail::send( 'emails.new-scheme', [ 'name' => Input::get( 'name' ), 'department' => $departments[ Input::get( 'department' ) - 1 ], 'phone' => Input::get( 'phone' ), 'email' => Input::get( 'email' ), 'date' => Input::get( 'date' ), 'time' => Input::get( 'time' ) ], function ( $message ) {
 
             $message->to( 'kontakt@smiletditt.no' )->subject( 'Ny henvendelse fra ' . Input::get( 'name' ) );
         } );
 
-        Mail::send( 'emails.scheme-sent', [ ], function ( $message ) {
+        Mail::send( 'emails.new-scheme', [ 'name' => Input::get( 'name' ), 'department' => $departments[ Input::get( 'department' ) - 1 ], 'phone' => Input::get( 'phone' ), 'email' => Input::get( 'email' ), 'date' => Input::get( 'date' ), 'time' => Input::get( 'time' ) ], function ( $message ) {
 
             $message->to( 'mangopixel.as@gmail.com' )->subject( 'Ny henvendelse fra ' . Input::get( 'name' ) );
         } );

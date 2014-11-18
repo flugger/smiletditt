@@ -306,7 +306,6 @@
 
 .DynamicWrap {
     position: relative;
-    z-index: 9999;
     top: 250px;
 
     @include at( 'phone' ) {
