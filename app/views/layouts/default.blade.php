@@ -126,7 +126,7 @@
                                 </h3>
                                 <div>
                                     <strong>Hverdager</strong>
-                                    <span>10-20</span>
+                                    <span>10-18</span>
                                 </div>
                                 <div>
                                     <strong>Lørdager</strong>
@@ -151,7 +151,7 @@
                                 </h3>
                                 <div>
                                     <strong>Hverdager</strong>
-                                    <span>10-20</span>
+                                    <span>10-18</span>
                                 </div>
                                 <div>
                                     <strong>Lørdager</strong>
@@ -177,10 +177,10 @@
                                         <a href = "https://www.facebook.com/smiletditttannkinikk" class = "facebook" target = "_blank"><span class = "Icon Icon--facebook"></span></a>
                                     </li>
                                     <li class="SocialIcons-icon">
-                                        <a href = "https://www.twitter.com/smiletditt" class = "twitter"><span class = "Icon Icon--twitter"></span></a>
+                                        <a href = "https://www.twitter.com/smilet_ditt" class = "twitter"><span class = "Icon Icon--twitter"></span></a>
                                     </li>
                                     <li class="SocialIcons-icon">
-                                        <a href = "https://plus.google.com/smiletditt" class = "google"><span class = "Icon Icon--google"></span></a>
+                                        <a href = "https://plus.google.com/u/0/105770224646766787528" class = "google"><span class = "Icon Icon--google"></span></a>
                                     </li>
                                 </ul>
                            </li>
