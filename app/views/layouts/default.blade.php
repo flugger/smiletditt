@@ -198,7 +198,7 @@
             </footer>
             <footer class = "FooterBar">
                 <div class="PageContainer">
-                    <div class = "FooterBar-info"><strong>© 2014</strong> - Design av Mango Pixel</div>
+                    <div class = "FooterBar-info"><strong>© {{ \Carbon\Carbon::now()->year }}</strong> - Design av Mango Pixel</div>
                 </div>
             </footer>
         </section>
