@@ -13,7 +13,7 @@
         <meta property = "og:url"         content = "http://smiletditt.no">
         <meta property = "og:title"       content = "Smilet Ditt Tannklinikk">
         <meta property = "og:description" content = "Tannlegesenter i Oslo, med avdelinger i Nydalen og Romsås. Undersøkelse, akutt hjelp, tannbleking og mer.">
-        <meta property = "og:image"       content = "images/social-logo.png">
+        <meta property = "og:image"       content = "images/thumbnail.jpg">
 
         <title>@yield( 'pageTitle', 'Smilet Ditt Tannklinikk - Tannlege i Oslo, med avdelinger i Nydalen og Romsås' )</title>
 
