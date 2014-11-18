@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'stromvalget.no',
+	'host' => 'mail.itpays.no',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'post@stromvalget.no', 'name' => 'Smilet Ditt Tannklinikk'),
+	'from' => array('address' => 'kontakt@smiletditt.no', 'name' => 'Smilet Ditt Tannklinikk'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'post@stromvalget.no',
+	'username' => 'kontakt@smiletditt.no',
 
 	/*
 	|--------------------------------------------------------------------------

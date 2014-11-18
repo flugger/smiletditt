@@ -306,7 +306,7 @@
 
 .DynamicWrap {
     position: relative;
-
+    z-index: 9999;
     top: 250px;
 
     @include at( 'phone' ) {
@@ -568,18 +568,25 @@
     display: inline-block;
 }
 
+.FooterSection {
+    background: color( 'action' );
+    text-align: center;
+    padding: layout( 'spacing' ) * 2 0;
+
+    color: mix( white, lighten( color( 'action' ), 50% ) );
+    font-weight: 200;
+}
+
 .FooterBar {
     height: layout( 'bigInputHeight' );
     line-height: layout( 'bigInputHeight' );
-    background: color( 'action' );
+    background: color( 'navBackground' );
     text-align: center;
 
     @include element( 'info' ) {
-        color: white;
-        font-weight: 500;
+        color: #bbb;
+        font-weight: 200;
         text-transform: uppercase;
-
-        color: mix( white, lighten( color( 'action' ), 5 ) );
 
         font-size: 12px;
 

@@ -6,7 +6,7 @@ var gulp         = require( 'gulp' ),
 gulp.task( 'styles', function() {
     return gulp.src( 'app/assets/sass/styles.scss' )
         .pipe( sass( { style: 'nested' } ) )
-        .pipe( autoprefixer( 'last 2 version' ) )
+        .pipe( autoprefixer( 'last 10 version' ) )
         .pipe( minify() )
         .pipe( gulp.dest( 'public/css' ) );
 });

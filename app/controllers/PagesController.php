@@ -36,8 +36,24 @@ class PagesController extends BaseController {
             return Redirect::route( 'contact' )->withInput()->withErrors( $validator );
         }
 
-        Mail::send( 'emails.scheme-sent', [ 'Laravel Test' ], function ( $message ) {
-            $message->to( 'flugged@gmail.com' );
+        if ( Input::get( 'email' ) ) {
+
+            Mail::send( 'emails.scheme-sent', [ ], function ( $message ) {
+
+                $message->to( Input::get( 'email' ) )->subject( 'Takk for din henvendelse!' );;
+            } );
+        }
+
+        Mail::send( 'emails.scheme-sent', [ ], function ( $message ) {
+
+            $message->to( 'kontakt@smiletditt.no' )->subject( 'Ny henvendelse fra ' . Input::get( 'name' ) );
         } );
+
+        Mail::send( 'emails.scheme-sent', [ ], function ( $message ) {
+
+            $message->to( 'mangopixel.as@gmail.com' )->subject( 'Ny henvendelse fra ' . Input::get( 'name' ) );
+        } );
+
+        return Redirect::to( '/kontakt?sent#info' );
     }
 }

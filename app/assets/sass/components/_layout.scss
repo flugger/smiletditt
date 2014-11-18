@@ -56,12 +56,16 @@
     @include row;
 
     @include element( 'text' ) {
-        @include span( 2 of 3 );
+        @include span( 1 of 1, (
+            'tablet':  2 of 3
+        ));
     }
 
     @include element( 'prices' ) {
         text-align: center;
-        @include span( 1 of 3 );
+        @include span( 1 of 1, (
+            'tablet':  1 of 3
+        ));
     }
 }
 

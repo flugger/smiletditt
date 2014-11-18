@@ -189,9 +189,16 @@
                 </section>
 
             </main>
+            <footer class = "FooterSection">
+                <div class="PageContainer">
+                    <div>Enkelte behandlinger gir mulighet for refusjon etter Helfos takster. Ved bruk av faktura påløper 80kr ekstra i fakturagebyr.</div>
+                    <div>Avbestilling av oppsatt time må gjøres innen 24 timer viredagen før. Uteblivelse fra time uten avbestilling beslastet med kr 450,- per halvtime.</div>
+                    <strong>Vi bruker de samme takstene som den offentlige tannhelsetjenesten.</strong>
+                </div>
+            </footer>
             <footer class = "FooterBar">
                 <div class="PageContainer">
-                    <div class = "FooterBar-info">© 2014 - Design av Mango Pixel</div>
+                    <div class = "FooterBar-info"><strong>© 2014</strong> - Design av Mango Pixel</div>
                 </div>
             </footer>
         </section>
